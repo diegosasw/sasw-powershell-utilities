@@ -3,12 +3,12 @@ Parametized script to generate HTML report of system event log
 #>
 
 Param (
-[string]$log = "System",
-[string]$computerName = $env:COMPUTERNAME,
-[string]$reportTitle = "Event Log Report",
-[int32]$newest = 500,
-[Parameter(Mandatory,HelpMessage = "Enter the path for the HTML file.")]
-[string]$path
+    [string]$log = "System",
+    [string]$computerName = $env:COMPUTERNAME,
+    [string]$reportTitle = "Event Log Report",
+    [int32]$newest = 500,
+    [Parameter(Mandatory, HelpMessage = "Enter the path for the HTML file.")]
+    [string]$path
 )
 
 # Get event log data and group it

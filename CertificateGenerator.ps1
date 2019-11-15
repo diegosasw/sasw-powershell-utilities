@@ -1,12 +1,11 @@
-function CreateCertificate
-{
+function CreateCertificate {
 	Param(
-	 [Parameter(Mandatory=$true)]
+	 [Parameter(Mandatory = $true)]
 	 [string]$certificateName,
-	 [Parameter(Mandatory=$true)]
-	 [string]$certificatePassword,
-	 [Parameter(Mandatory=$false)]
-	 [Int]$expirationInYears=20
+	 [Parameter(Mandatory = $true)]
+	 [SecureString]$certificatePassword,
+	 [Parameter(Mandatory = $false)]
+	 [Int]$expirationInYears = 20
 	)
 
 	$pfxFilePath = $certificateName + ".pfx"
