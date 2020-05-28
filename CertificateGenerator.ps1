@@ -5,6 +5,7 @@ function CreateCertificate {
 	 [Parameter(Mandatory = $true)]
 	 [SecureString]$certificatePassword,
 	 [Parameter(Mandatory = $false)]
+	 [ValidateRange(1, [int]::MaxValue)]
 	 [Int]$expirationInYears = 20
 	)
 
